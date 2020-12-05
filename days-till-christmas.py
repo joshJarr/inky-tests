@@ -9,6 +9,7 @@ import inkyphat
 #inkyphat.set_rotation(180)
 
 colour = 'red'
+inkyphat.set_colour(colour)
 
 # Show the backdrop image
 
