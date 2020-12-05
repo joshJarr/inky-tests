@@ -2,21 +2,6 @@ from inky import InkyWHAT
 from PIL import Image, ImageFont, ImageDraw
 from font_fredoka_one import FredokaOne
 
-inky_display = InkyWHAT("red")
-inky_display.set_border(inky_display.WHITE)
-
-
-img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
-draw = ImageDraw.Draw(img)
-
-font = ImageFont.truetype(FredokaOne, 36)
-
-show_countdown("20")
-show_message("Days Unil Christmas!")
-
-
-inky_display.set_image(img)
-inky_display.show()
 
 def show_countdown(count):
   w, h = font.getsize(count)
@@ -41,3 +26,20 @@ def show_message(message):
     message,
     inky_display.RED, font
   )
+
+
+inky_display = InkyWHAT("red")
+inky_display.set_border(inky_display.WHITE)
+
+
+img = Image.new("P", (inky_display.WIDTH, inky_display.HEIGHT))
+draw = ImageDraw.Draw(img)
+
+font = ImageFont.truetype(FredokaOne, 36)
+
+show_countdown("20")
+show_message("Days Unil Christmas!")
+
+
+inky_display.set_image(img)
+inky_display.show()
