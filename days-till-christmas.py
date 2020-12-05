@@ -28,7 +28,7 @@ def show_countdown(count):
     (0),
     count,
     inky_display.RED, font
-  )
+  ))
 
 def show_message(message):
   w, h = font.getsize(message)
